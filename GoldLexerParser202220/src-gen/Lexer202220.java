@@ -950,9 +950,9 @@ public final class Lexer202220 {
       $line=219;
       alphaNum=$cast(ISet.class,$fix($opUnionY($opUnionY($opUnionY(alphaUpper,alphaLower),digits),GCollections.asSet('-'))));
       $line=221;
-      keyWords=$cast(ISet.class,$fix(GCollections.asSet("north","right","walk","look")));
+      keyWords=$cast(ISet.class,$fix(GCollections.asSet("north","right","walk","look","jump","jumpTo","veer","drop","grab","get","free","pop","PROG","CORP","var")));
       $line=222;
-      allSymbols=$cast(ISet.class,$fix(GCollections.asSet("(",")",",","<=")));
+      allSymbols=$cast(ISet.class,$fix(GCollections.asSet("(",")",",","=",";","{","}")));
       $line=233;
       $invokeMethod("put",translation,new Object[]{"north",'N'});
       $line=234;
@@ -965,7 +965,29 @@ public final class Lexer202220 {
       $invokeMethod("put",translation,new Object[]{"IdL",'v'});
       $line=238;
       $invokeMethod("put",translation,new Object[]{"IdU",'V'});
+      $line=239;
+      $invokeMethod("put",translation,new Object[]{"jump",'j'});
+      $line=240;
+      $invokeMethod("put",translation,new Object[]{"jumpTo",'J'});
       $line=241;
+      $invokeMethod("put",translation,new Object[]{"veer",'B'});
+      $line=242;
+      $invokeMethod("put",translation,new Object[]{"drop",'d'});
+      $line=243;
+      $invokeMethod("put",translation,new Object[]{"grab",'g'});
+      $line=244;
+      $invokeMethod("put",translation,new Object[]{"get",'G'});
+      $line=245;
+      $invokeMethod("put",translation,new Object[]{"free",'f'});
+      $line=246;
+      $invokeMethod("put",translation,new Object[]{"pop",'P'});
+      $line=247;
+      $invokeMethod("put",translation,new Object[]{"PROG",'p'});
+      $line=248;
+      $invokeMethod("put",translation,new Object[]{"CORP",'C'});
+      $line=249;
+      $invokeMethod("put",translation,new Object[]{"var",'A'});
+      $line=253;
       $invokeMethod("put",translation,new Object[]{"Num",'#'});
     }
     catch (Throwable $throwable) {
