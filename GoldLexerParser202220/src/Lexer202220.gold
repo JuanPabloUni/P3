@@ -210,7 +210,7 @@ end
 
 // **************  This is the only  procedure you have to change for your lexer 
  
- procedure initialize() begin
+procedure initialize() begin
  
  	skipChars := {' ', '\t', '\n'}
 	alphaUpper := ('A'‥'Z')
@@ -218,8 +218,8 @@ end
    digits :=  ('0'‥'9')
 	alphaNum := alphaUpper ∪ alphaLower ∪ digits  ∪ {'-'}      // Alphanumeric characters
 
-	keyWords := {"north","right","walk","look"}  // keywords
-	allSymbols := {"(", ")" , ",", "<=" }  // Symbols  and brackets, both single char and  multicharacter
+	keyWords := {"north","right","walk","look","jump","jumpTo","veer","drop","grab","get","free","pop","PROG","CORP","var"}  // keywords
+	allSymbols := {"(", ")" , ",", "=",";","{","}" }  // Symbols  and brackets, both single char and  multicharacter
 	
 	
 	
@@ -235,12 +235,22 @@ end
 	translation.put("walk",'w') 
 	translation.put("look",'k') 
 	translation.put("IdL",'v')  
-	translation.put("IdU",'V')  //if  there is no difference between names that start with caps and those that don't,
+	translation.put("IdU",'V')
+	translation.put("jump",'j')
+	translation.put("jumpTo",'J')
+	translation.put("veer",'B')
+	translation.put("drop",'d')
+	translation.put("grab",'g')
+	translation.put("get",'G')
+	translation.put("free",'f')
+	translation.put("pop",'P')
+	translation.put("PROG",'p')
+	translation.put("CORP",'C')
+	translation.put("var",'A')
+	//if  there is no difference between names that start with caps and those that don't,
 	    							//assign the same translation
 	 
 	 translation.put("Num",'#')
-	 // **************
+	 // ******
 	 
 end
-
-
