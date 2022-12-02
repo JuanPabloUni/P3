@@ -270,7 +270,7 @@ public final class Lexer202220 {
     $try:try {
       gold.structures.set.ISet $v5=$newSet(GCollections.emptySet());
       $v6:for (Object s:GCollections.unmodifiableCollection(strings)) {
-        $v5.union(GCollections.unmodifiableSet(((java.lang.Iterable)(Lexer202220.chars(s)))));
+        $v5.union(GCollections.unmodifiableSet(((java.lang.Iterable)($invokeMethod(Lexer202220.class,"chars",true,null,new Object[]{s})))));
       }
       $result=$v5;
       if (true) break $try;
@@ -348,7 +348,7 @@ public final class Lexer202220 {
     $try:try {
       gold.structures.set.ISet $v19=$newSet(GCollections.emptySet());
       $v20:for (Object s:GCollections.unmodifiableCollection(strings)) {
-        $v19.union(GCollections.unmodifiableSet(((java.lang.Iterable)(Lexer202220.prefixes(s)))));
+        $v19.union(GCollections.unmodifiableSet(((java.lang.Iterable)($invokeMethod(Lexer202220.class,"prefixes",true,null,new Object[]{s})))));
       }
       $result=$v19;
       if (true) break $try;
@@ -364,7 +364,7 @@ public final class Lexer202220 {
     int $line=0;
     Object $result=null;
     $try:try {
-      $result=(($bool((($opEqualY($opAbsolY(q),1)&&$opMembrY(q,Symbols1))&&!$opEqualY(q,'\n'))))?(q):(((gold.structures.map.GHashTableMap)translation).get(q)));
+      $result=(($bool((($opEqualY($opAbsolY(q),1)&&$opMembrY(q,Symbols1))&&!$opEqualY(q,'\n'))))?(q):($invokeMethod("get",translation,new Object[]{q})));
       if (true) break $try;
       $line=42;
       $rethrow(new RuntimeException("The function \"translationGet(q:Object)\" did not return a value."));
@@ -381,7 +381,7 @@ public final class Lexer202220 {
       $line=45;
       currentString=$cast(String.class,$fix(""));
       $line=46;
-      images=$cast(GArrayList.class,$fix($invokeConstructor(GArrayList.class,new Object[]{})));
+      images=$cast(GArrayList.class,$fix($invokeMethod(Lexer202220.class,"GArrayList",true,null,new Object[]{})));
       $line=47;
       Object result=$fix($invokeMethod("acceptsString",M,new Object[]{input}));
       $line=48;
@@ -414,12 +414,12 @@ public final class Lexer202220 {
         }
         else {
           $line=56;
-          for (Object $v21:GCollections.unmodifiableCollection(Lexer202220.splits(q))) {
+          for (Object $v21:GCollections.unmodifiableCollection($invokeMethod(Lexer202220.class,"splits",true,null,new Object[]{q}))) {
             java.util.Iterator $v22=GCollections.unmodifiableCollection($v21).iterator();
             Object s=$v22.next();
             Object t=$v22.next();
             $line=57;
-            if ((!$bool(Lexer202220.problems($cast(java.lang.String.class,s)))&&!$bool(Lexer202220.problems($cast(java.lang.String.class,t))))) {
+            if ((!$bool($invokeMethod(Lexer202220.class,"problems",true,null,new Object[]{s}))&&!$bool($invokeMethod(Lexer202220.class,"problems",true,null,new Object[]{t})))) {
               $line=57;
               $result=false;
               if (true) break $try;
@@ -451,7 +451,7 @@ public final class Lexer202220 {
       $line=68;
       q=$cast(String.class,$fix(state));
       $line=69;
-      Object n=$fix(((java.lang.String)q).length());
+      Object n=$fix($invokeMethod("length",q,new Object[]{}));
       $line=70;
       if ($opEqualY(n,0)) {
         $line=70;
@@ -462,9 +462,9 @@ public final class Lexer202220 {
         $line=71;
         if ($opMembrY(q,allSymbols)) {
           $line=72;
-          ((gold.structures.list.GArrayList)images).add(q);
+          $invokeMethod("add",images,new Object[]{q});
           $line=73;
-          $result=Lexer202220.translationGet(q);
+          $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
           if (true) break $try;
         }
         else {
@@ -476,14 +476,14 @@ public final class Lexer202220 {
           }
           else {
             $line=76;
-            for (Object $v23:GCollections.unmodifiableCollection(Lexer202220.splits(q))) {
+            for (Object $v23:GCollections.unmodifiableCollection($invokeMethod(Lexer202220.class,"splits",true,null,new Object[]{q}))) {
               java.util.Iterator $v24=GCollections.unmodifiableCollection($v23).iterator();
               Object s=$v24.next();
               Object t=$v24.next();
               $line=77;
-              x=$fix(Lexer202220.translationPreOps(s));
+              x=$fix($invokeMethod(Lexer202220.class,"translationPreOps",true,null,new Object[]{s}));
               $line=78;
-              y=$fix(Lexer202220.translationPreOps(t));
+              y=$fix($invokeMethod(Lexer202220.class,"translationPreOps",true,null,new Object[]{t}));
               $line=79;
               if ((!$opEqualY(x,"")&&!$opEqualY(y,""))) {
                 $line=80;
@@ -510,11 +510,11 @@ public final class Lexer202220 {
     Object $result=null;
     $try:try {
       $line=91;
-      Lexer202220.initialize();
+      $invokeMethod(Lexer202220.class,"initialize",true,null,new Object[]{});
       $line=93;
-      preOps=$cast(ISet.class,$fix(Lexer202220.allPrefixes(allSymbols)));
+      preOps=$cast(ISet.class,$fix($invokeMethod(Lexer202220.class,"allPrefixes",true,null,new Object[]{allSymbols})));
       $line=94;
-      preKW=$cast(ISet.class,$fix(Lexer202220.allPrefixes(keyWords)));
+      preKW=$cast(ISet.class,$fix($invokeMethod(Lexer202220.class,"allPrefixes",true,null,new Object[]{keyWords})));
       $line=95;
       gold.structures.set.ISet $v25=$newSet(GCollections.emptySet());
       $v26:for (Object x:GCollections.unmodifiableCollection(allSymbols)) {
@@ -535,7 +535,7 @@ public final class Lexer202220 {
       CharsSymbols1=$cast(ISet.class,$fix($v29));
       $line=98;
       gold.structures.set.ISet $v31=$newSet(GCollections.emptySet());
-      $v32:for (Object x:GCollections.unmodifiableCollection(((gold.structures.map.GHashTableMap)translation).values())) {
+      $v32:for (Object x:GCollections.unmodifiableCollection($invokeMethod("values",translation,new Object[]{}))) {
         $v31.union(GCollections.unmodifiableSet(((java.lang.Iterable)(GCollections.asSet(x)))));
       }
       Out=$cast(ISet.class,$fix($opUnionY(CharsSymbols1,$v31)));
@@ -548,13 +548,13 @@ public final class Lexer202220 {
       $line=105;
       System.out.println($message(new Object[]{Q}));
       $line=107;
-      Object \u03A3=$fix($opUnionY($opUnionY($opUnionY(alphaNum,Lexer202220.charsStrings(allSymbols)),skipChars),GCollections.asSet(':','-')));
+      Object \u03A3=$fix($opUnionY($opUnionY($opUnionY(alphaNum,$invokeMethod(Lexer202220.class,"charsStrings",true,null,new Object[]{allSymbols})),skipChars),GCollections.asSet(':','-')));
       $line=110;
       Object q_0=$fix("INIT");
       $line=111;
       Object F=$fix(GCollections.asSet("INIT"));
       $line=112;
-      $result=$invokeConstructor(GDeterministicTransducer.class,new Object[]{Q,\u03A3,Out,q_0,F,new GMethod(Lexer202220.class,"\u03B4"),new GMethod(Lexer202220.class,"g"),new GMethod(Lexer202220.class,"h")});
+      $result=$invokeMethod(Lexer202220.class,"GDeterministicTransducer",true,null,new Object[]{Q,\u03A3,Out,q_0,F,new GMethod(Lexer202220.class,"\u03B4"),new GMethod(Lexer202220.class,"g"),new GMethod(Lexer202220.class,"h")});
       if (true) break $try;
       $line=113;
       $rethrow(new RuntimeException("The function \"createLexer()\" did not return a value."));
@@ -590,7 +590,7 @@ public final class Lexer202220 {
           }
           else {
             $line=124;
-            if ($bool(Lexer202220.problems($cast(java.lang.String.class,q)))) {
+            if ($bool($invokeMethod(Lexer202220.class,"problems",true,null,new Object[]{q}))) {
               $line=124;
               $result="Err";
               if (true) break $try;
@@ -652,7 +652,7 @@ public final class Lexer202220 {
         }
         else {
           $line=133;
-          if (((($opMembrY(\u03C3,skipChars)&&$opMembrY(q,preKW))&&!$bool($opMembrY(q,keyWords)))&&$opEqualY(((java.lang.String)q).charAt($int(0)),':'))) {
+          if (((($opMembrY(\u03C3,skipChars)&&$opMembrY(q,preKW))&&!$bool($opMembrY(q,keyWords)))&&$opEqualY($invokeMethod("charAt",q,new Object[]{0}),':'))) {
             $line=133;
             $result="Err";
             if (true) break $try;
@@ -708,14 +708,14 @@ public final class Lexer202220 {
                         }
                         else {
                           $line=141;
-                          if ((($opMembrY(q,preKW)&&$opMembrY(\u03C3,alphaNum))&&$opMembrY(((java.lang.String)q).charAt($int(0)),alphaUpper))) {
+                          if ((($opMembrY(q,preKW)&&$opMembrY(\u03C3,alphaNum))&&$opMembrY($invokeMethod("charAt",q,new Object[]{0}),alphaUpper))) {
                             $line=141;
                             $result="IdU";
                             if (true) break $try;
                           }
                           else {
                             $line=142;
-                            if ((($opMembrY(q,preKW)&&$opMembrY(\u03C3,alphaNum))&&$opMembrY(((java.lang.String)q).charAt($int(0)),alphaLower))) {
+                            if ((($opMembrY(q,preKW)&&$opMembrY(\u03C3,alphaNum))&&$opMembrY($invokeMethod("charAt",q,new Object[]{0}),alphaLower))) {
                               $line=142;
                               $result="IdL";
                               if (true) break $try;
@@ -821,11 +821,11 @@ public final class Lexer202220 {
         $line=165;
         if (($opMembrY(\u03C3,skipChars)&&$opMembrY(q,allSymbols))) {
           $line=166;
-          ((gold.structures.list.GArrayList)images).add(currentString);
+          $invokeMethod("add",images,new Object[]{currentString});
           $line=167;
           currentString=$cast(String.class,$fix(""));
           $line=168;
-          $result=Lexer202220.translationGet(q);
+          $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
           if (true) break $try;
         }
         else {
@@ -841,11 +841,11 @@ public final class Lexer202220 {
             $line=172;
             if (($opMembrY(\u03C3,$opUnionY(StartOps,alphaNum))&&$opMembrY(q,allSymbols))) {
               $line=173;
-              ((gold.structures.list.GArrayList)images).add(currentString);
+              $invokeMethod("add",images,new Object[]{currentString});
               $line=174;
               currentString=$cast(String.class,$fix($opAdditY("",s)));
               $line=175;
-              $result=Lexer202220.translationGet(q);
+              $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
               if (true) break $try;
             }
             else {
@@ -854,7 +854,7 @@ public final class Lexer202220 {
                 $line=177;
                 currentString=$cast(String.class,$fix($opAdditY("",s)));
                 $line=178;
-                $result=Lexer202220.translationPreOps(q);
+                $result=$invokeMethod(Lexer202220.class,"translationPreOps",true,null,new Object[]{q});
                 if (true) break $try;
               }
               else {
@@ -881,9 +881,9 @@ public final class Lexer202220 {
           }
           else {
             $line=189;
-            if ($opEqualY(Lexer202220.translationGet(q),null)) {
+            if ($opEqualY($invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q}),null)) {
               $line=191;
-              ((gold.structures.list.GArrayList)images).add(currentString);
+              $invokeMethod("add",images,new Object[]{currentString});
               $line=192;
               currentString=$cast(String.class,$fix((($bool($opMembrY(\u03C3,$opUnionY(skipChars,StartOps))))?(s):(""))));
               $line=193;
@@ -891,14 +891,14 @@ public final class Lexer202220 {
               $line=194;
               if ($opMembrY(f,alphaUpper)) {
                 $line=194;
-                $result=Lexer202220.translationGet("IdU");
+                $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{"IdU"});
                 if (true) break $try;
               }
               else {
                 $line=195;
                 if ($opMembrY(f,alphaLower)) {
                   $line=196;
-                  $result=Lexer202220.translationGet("IdL");
+                  $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{"IdL"});
                   if (true) break $try;
                 }
                 else {
@@ -910,11 +910,11 @@ public final class Lexer202220 {
             }
             else {
               $line=200;
-              ((gold.structures.list.GArrayList)images).add(currentString);
+              $invokeMethod("add",images,new Object[]{currentString});
               $line=201;
               currentString=$cast(String.class,$fix((($bool($opMembrY(\u03C3,$opUnionY(skipChars,StartOps))))?(s):(""))));
               $line=202;
-              $result=Lexer202220.translationGet(q);
+              $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
               if (true) break $try;
             }
           }
@@ -954,19 +954,19 @@ public final class Lexer202220 {
       $line=222;
       allSymbols=$cast(ISet.class,$fix(GCollections.asSet("(",")",",","<=")));
       $line=233;
-      ((gold.structures.map.GHashTableMap)translation).put("north",'N');
+      $invokeMethod("put",translation,new Object[]{"north",'N'});
       $line=234;
-      ((gold.structures.map.GHashTableMap)translation).put("right",'r');
+      $invokeMethod("put",translation,new Object[]{"right",'r'});
       $line=235;
-      ((gold.structures.map.GHashTableMap)translation).put("walk",'w');
+      $invokeMethod("put",translation,new Object[]{"walk",'w'});
       $line=236;
-      ((gold.structures.map.GHashTableMap)translation).put("look",'k');
+      $invokeMethod("put",translation,new Object[]{"look",'k'});
       $line=237;
-      ((gold.structures.map.GHashTableMap)translation).put("IdL",'v');
+      $invokeMethod("put",translation,new Object[]{"IdL",'v'});
       $line=238;
-      ((gold.structures.map.GHashTableMap)translation).put("IdU",'V');
+      $invokeMethod("put",translation,new Object[]{"IdU",'V'});
       $line=241;
-      ((gold.structures.map.GHashTableMap)translation).put("Num",'#');
+      $invokeMethod("put",translation,new Object[]{"Num",'#'});
     }
     catch (Throwable $throwable) {
       $rethrow($throwable,Lexer202220.class,"initialize",$line);
