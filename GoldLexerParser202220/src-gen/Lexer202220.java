@@ -796,10 +796,10 @@ public final class Lexer202220 {
     int $line=0;
     Object $result=null;
     $try:try {
-      $line=169;
+      $line=168;
       $result="";
       if (true) break $try;
-      $line=170;
+      $line=169;
       $rethrow(new RuntimeException("The function \"g(q:Object)\" did not return a value."));
     }
     catch (Throwable $throwable) {
@@ -811,56 +811,56 @@ public final class Lexer202220 {
     int $line=0;
     Object $result=null;
     $try:try {
-      $line=173;
+      $line=172;
       String s=null;
       s=$defaultValue(String.class);
-      $line=174;
+      $line=173;
       s=$cast(String.class,$fix((($bool($opEqualY(\u03C3,'\n')))?("\\n"):($opAdditY("",\u03C3)))));
-      $line=176;
+      $line=175;
       if ($opMembrY(q,preOps)) {
-        $line=177;
+        $line=176;
         if (($opMembrY(\u03C3,skipChars)&&$opMembrY(q,allSymbols))) {
-          $line=178;
+          $line=177;
           $invokeMethod("add",images,new Object[]{currentString});
-          $line=179;
+          $line=178;
           currentString=$cast(String.class,$fix(""));
-          $line=180;
+          $line=179;
           $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
           if (true) break $try;
         }
         else {
-          $line=181;
+          $line=180;
           if ($opMembrY($opAdditY(q,\u03C3),preOps)) {
-            $line=182;
+            $line=181;
             currentString=$cast(String.class,$fix($opAdditY(currentString,s)));
-            $line=183;
+            $line=182;
             $result="";
             if (true) break $try;
           }
           else {
-            $line=184;
+            $line=183;
             if (($opMembrY(\u03C3,$opUnionY(StartOps,alphaNum))&&$opMembrY(q,allSymbols))) {
-              $line=185;
+              $line=184;
               $invokeMethod("add",images,new Object[]{currentString});
-              $line=186;
+              $line=185;
               currentString=$cast(String.class,$fix($opAdditY("",s)));
-              $line=187;
+              $line=186;
               $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
               if (true) break $try;
             }
             else {
-              $line=188;
+              $line=187;
               if ($opMembrY(\u03C3,$opUnionY($opUnionY($opUnionY(StartOps,alphaNum),skipChars),GCollections.asSet(':')))) {
-                $line=189;
+                $line=188;
                 currentString=$cast(String.class,$fix($opAdditY("",s)));
-                $line=190;
+                $line=189;
                 $result=$invokeMethod(Lexer202220.class,"translationPreOps",true,null,new Object[]{q});
                 if (true) break $try;
               }
               else {
-                $line=192;
+                $line=191;
                 currentString=$cast(String.class,$fix($opAdditY(currentString,s)));
-                $line=193;
+                $line=192;
                 $result="";
                 if (true) break $try;
               }
@@ -869,65 +869,65 @@ public final class Lexer202220 {
         }
       }
       else {
-        $line=197;
+        $line=196;
         if ((!$opMembrY(q,GCollections.asSet("Err"))&&$opMembrY(\u03C3,$opUnionY(skipChars,StartOps)))) {
-          $line=198;
+          $line=197;
           if ($opEqualY(q,"INIT")) {
-            $line=199;
+            $line=198;
             currentString=$cast(String.class,$fix((($bool($opMembrY(\u03C3,StartOps)))?(s):(""))));
-            $line=200;
+            $line=199;
             $result="";
             if (true) break $try;
           }
           else {
-            $line=201;
+            $line=200;
             if ($opEqualY($invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q}),null)) {
-              $line=203;
+              $line=202;
               $invokeMethod("add",images,new Object[]{currentString});
-              $line=204;
+              $line=203;
               currentString=$cast(String.class,$fix((($bool($opMembrY(\u03C3,$opUnionY(skipChars,StartOps))))?(s):(""))));
-              $line=205;
+              $line=204;
               Object f=$fix($invokeMethod("charAt",q,new Object[]{0}));
-              $line=206;
+              $line=205;
               if ($opMembrY(f,alphaUpper)) {
-                $line=206;
+                $line=205;
                 $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{"IdU"});
                 if (true) break $try;
               }
               else {
-                $line=207;
+                $line=206;
                 if ($opMembrY(f,alphaLower)) {
-                  $line=208;
+                  $line=207;
                   $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{"IdL"});
                   if (true) break $try;
                 }
                 else {
-                  $line=209;
+                  $line=208;
                   $result=null;
                   if (true) break $try;
                 }
               }
             }
             else {
-              $line=212;
+              $line=211;
               $invokeMethod("add",images,new Object[]{currentString});
-              $line=213;
+              $line=212;
               currentString=$cast(String.class,$fix((($bool($opMembrY(\u03C3,$opUnionY(skipChars,StartOps))))?(s):(""))));
-              $line=214;
+              $line=213;
               $result=$invokeMethod(Lexer202220.class,"translationGet",true,null,new Object[]{q});
               if (true) break $try;
             }
           }
         }
         else {
-          $line=217;
+          $line=216;
           currentString=$cast(String.class,$fix($opAdditY(currentString,s)));
-          $line=218;
+          $line=217;
           $result="";
           if (true) break $try;
         }
       }
-      $line=221;
+      $line=220;
       $rethrow(new RuntimeException("The function \"h(q:Object,\u03C3:Object)\" did not return a value."));
     }
     catch (Throwable $throwable) {
@@ -939,55 +939,55 @@ public final class Lexer202220 {
     int $line=0;
     Object $result=null;
     $try:try {
-      $line=227;
-      skipChars=$cast(ISet.class,$fix(GCollections.asSet(' ','\t','\n')));
       $line=228;
-      alphaUpper=$cast(ISet.class,$fix($opIntvlY('A','Z')));
+      skipChars=$cast(ISet.class,$fix(GCollections.asSet(' ','\t','\n')));
       $line=229;
-      alphaLower=$cast(ISet.class,$fix($opIntvlY('a','z')));
+      alphaUpper=$cast(ISet.class,$fix($opIntvlY('A','Z')));
       $line=230;
-      digits=$cast(ISet.class,$fix($opIntvlY('0','9')));
+      alphaLower=$cast(ISet.class,$fix($opIntvlY('a','z')));
       $line=231;
+      digits=$cast(ISet.class,$fix($opIntvlY('0','9')));
+      $line=232;
       alphaNum=$cast(ISet.class,$fix($opUnionY($opUnionY($opUnionY(alphaUpper,alphaLower),digits),GCollections.asSet('-'))));
-      $line=233;
-      keyWords=$cast(ISet.class,$fix(GCollections.asSet("north","right","walk","look","jump","jumpTo","veer","drop","grab","get","free","pop","PROG","CORP","var")));
       $line=234;
+      keyWords=$cast(ISet.class,$fix(GCollections.asSet("north","right","walk","look","jump","jumpTo","veer","drop","grab","get","free","pop","PROG","CORP","var")));
+      $line=235;
       allSymbols=$cast(ISet.class,$fix(GCollections.asSet("(",")",",","=",";","{","}")));
-      $line=245;
-      $invokeMethod("put",translation,new Object[]{"north",'N'});
       $line=246;
-      $invokeMethod("put",translation,new Object[]{"right",'r'});
+      $invokeMethod("put",translation,new Object[]{"north",'N'});
       $line=247;
-      $invokeMethod("put",translation,new Object[]{"walk",'w'});
+      $invokeMethod("put",translation,new Object[]{"right",'r'});
       $line=248;
-      $invokeMethod("put",translation,new Object[]{"look",'k'});
+      $invokeMethod("put",translation,new Object[]{"walk",'w'});
       $line=249;
-      $invokeMethod("put",translation,new Object[]{"IdL",'v'});
+      $invokeMethod("put",translation,new Object[]{"look",'k'});
       $line=250;
-      $invokeMethod("put",translation,new Object[]{"IdU",'V'});
+      $invokeMethod("put",translation,new Object[]{"IdL",'v'});
       $line=251;
-      $invokeMethod("put",translation,new Object[]{"jump",'j'});
+      $invokeMethod("put",translation,new Object[]{"IdU",'V'});
       $line=252;
-      $invokeMethod("put",translation,new Object[]{"jumpTo",'J'});
+      $invokeMethod("put",translation,new Object[]{"jump",'j'});
       $line=253;
-      $invokeMethod("put",translation,new Object[]{"veer",'B'});
+      $invokeMethod("put",translation,new Object[]{"jumpTo",'J'});
       $line=254;
-      $invokeMethod("put",translation,new Object[]{"drop",'d'});
+      $invokeMethod("put",translation,new Object[]{"veer",'B'});
       $line=255;
-      $invokeMethod("put",translation,new Object[]{"grab",'g'});
+      $invokeMethod("put",translation,new Object[]{"drop",'d'});
       $line=256;
-      $invokeMethod("put",translation,new Object[]{"get",'G'});
+      $invokeMethod("put",translation,new Object[]{"grab",'g'});
       $line=257;
-      $invokeMethod("put",translation,new Object[]{"free",'f'});
+      $invokeMethod("put",translation,new Object[]{"get",'G'});
       $line=258;
-      $invokeMethod("put",translation,new Object[]{"pop",'P'});
+      $invokeMethod("put",translation,new Object[]{"free",'f'});
       $line=259;
-      $invokeMethod("put",translation,new Object[]{"PROG",'p'});
+      $invokeMethod("put",translation,new Object[]{"pop",'P'});
       $line=260;
-      $invokeMethod("put",translation,new Object[]{"CORP",'C'});
+      $invokeMethod("put",translation,new Object[]{"PROG",'p'});
       $line=261;
+      $invokeMethod("put",translation,new Object[]{"CORP",'C'});
+      $line=262;
       $invokeMethod("put",translation,new Object[]{"var",'A'});
-      $line=265;
+      $line=266;
       $invokeMethod("put",translation,new Object[]{"Num",'#'});
     }
     catch (Throwable $throwable) {

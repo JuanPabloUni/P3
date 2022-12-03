@@ -53,7 +53,7 @@ function runLexer(M, input) begin
     return ⟨result,images⟩
  end
  
- //Function to determine if there are any errors when lexing the language
+//Function to determine if there are any errors when lexing the language
  
  function problems(q: String) begin
     
@@ -162,8 +162,7 @@ function δ(state,σ) begin
 end	
 end 
 
- 
-
+//Main functions
 
 function g(q) begin
 	return λ
@@ -222,6 +221,8 @@ end
 
 // **************  This is the only  procedure you have to change for your lexer 
  
+//Initializes the Lexer with all the predefined characteristics
+
 procedure initialize() begin
  
  	skipChars := {' ', '\t', '\n'}
