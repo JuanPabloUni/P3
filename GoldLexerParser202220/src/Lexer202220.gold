@@ -267,8 +267,11 @@ procedure initialize() begin
 	translation.put("south",'6')
 	translation.put("east",'7')
 	translation.put("west",'8')
-	translation.put("not", 'n')
+	translation.put("isFacing", 'i')
+	translation.put("isValid", 'I')
 	translation.put("canWalk", 'c')
+	translation.put("not", 'n')
+	
 	
 	//if  there is no difference between names that start with caps and those that don't,
 	    							//assign the same translation

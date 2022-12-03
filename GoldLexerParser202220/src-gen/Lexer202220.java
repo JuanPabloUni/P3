@@ -1002,10 +1002,14 @@ public final class Lexer202220 {
       $line=269;
       $invokeMethod("put",translation,new Object[]{"west",'8'});
       $line=270;
-      $invokeMethod("put",translation,new Object[]{"not",'n'});
+      $invokeMethod("put",translation,new Object[]{"isFacing",'i'});
       $line=271;
+      $invokeMethod("put",translation,new Object[]{"isValid",'I'});
+      $line=272;
       $invokeMethod("put",translation,new Object[]{"canWalk",'c'});
-      $line=276;
+      $line=273;
+      $invokeMethod("put",translation,new Object[]{"not",'n'});
+      $line=279;
       $invokeMethod("put",translation,new Object[]{"Num",'#'});
     }
     catch (Throwable $throwable) {
