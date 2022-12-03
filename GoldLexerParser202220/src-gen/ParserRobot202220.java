@@ -64,66 +64,93 @@ public final class ParserRobot202220 {
     }
     return $result;
   }
+  public static IAutomaton createAutomaton() {
+    int $line=0;
+    Object $result=null;
+    $try:try {
+      $line=11;
+      Object Q=$fix(GCollections.asSet("I","END","ERR","VARS","BEGIN","WALK","WALKI","WALKIN","WALKINX","WALKTO","VEER","LOOK","DROP"));
+      $line=13;
+      Object \u03A3=$fix(GCollections.asSet('P','m','N','r','w','l','v','V','j','J','B','d','g','G','f','C','A','b',',','(',')','=',';','{','}','#','1','2','3','4','5','6','7','8'));
+      $line=14;
+      Object q_0=$fix("I");
+      $line=15;
+      Object F=$fix(GCollections.asSet("END"));
+      $line=16;
+      Object \u0394=$fix(new Object[]{new Object[]{"I",'P',"BEGIN"},new Object[]{"I",'b',"END"},new Object[]{"I",'m',"ERR"},new Object[]{"I",'N',"ERR"},new Object[]{"I",'r',"ERR"},new Object[]{"I",'w',"ERR"},new Object[]{"I",'l',"ERR"},new Object[]{"I",'v',"ERR"},new Object[]{"I",'V',"ERR"},new Object[]{"I",'j',"ERR"},new Object[]{"I",'J',"ERR"},new Object[]{"I",'B',"ERR"},new Object[]{"I",'d',"ERR"},new Object[]{"I",'g',"ERR"},new Object[]{"I",'G',"ERR"},new Object[]{"I",'f',"ERR"},new Object[]{"I",'p',"ERR"},new Object[]{"I",'C',"ERR"},new Object[]{"I",'A',"ERR"},new Object[]{"I",'b',"BEGIN"},new Object[]{"I",'#',"ERR"},new Object[]{"VARS",'P',"BEGIN"},new Object[]{"VARS",'C',"END"},new Object[]{"VARS",'w',"ERR"},new Object[]{"VARS",'l',"ERR"},new Object[]{"VARS",'v',"VARS"},new Object[]{"VARS",'V',"VARS"},new Object[]{"VARS",'j',"ERR"},new Object[]{"VARS",'J',"ERR"},new Object[]{"VARS",'B',"ERR"},new Object[]{"VARS",'d',"ERR"},new Object[]{"VARS",'g',"ERR"},new Object[]{"VARS",'G',"ERR"},new Object[]{"VARS",'f',"ERR"},new Object[]{"VARS",'m',"ERR"},new Object[]{"VARS",'A',"VARS"},new Object[]{"VARS",'b',"ERR"},new Object[]{"VARS",'c',"ERR"},new Object[]{"VARS",',',"VARS"},new Object[]{"VARS",';',"VARS"},new Object[]{"VARS",'1',"ERR"},new Object[]{"VARS",'2',"ERR"},new Object[]{"VARS",'3',"ERR"},new Object[]{"VARS",'4',"ERR"},new Object[]{"VARS",'5',"ERR"},new Object[]{"VARS",'6',"ERR"},new Object[]{"VARS",'7',"ERR"},new Object[]{"VARS",'8',"ERR"},new Object[]{"BEGIN",'P',"ERR"},new Object[]{"BEGIN",'C',"END"},new Object[]{"BEGIN",'w',"WALK"},new Object[]{"BEGIN",'l',"LOOK"},new Object[]{"BEGIN",'v',"ERR"},new Object[]{"BEGIN",'V',"ERR"},new Object[]{"BEGIN",'j',"JUMP"},new Object[]{"BEGIN",'J',"jUMPTO"},new Object[]{"BEGIN",'B',"VEER"},new Object[]{"BEGIN",'d',"DROP"},new Object[]{"BEGIN",'g',"GRAB"},new Object[]{"BEGIN",'G',"GET"},new Object[]{"BEGIN",'f',"FREE"},new Object[]{"BEGIN",'A',"VARS"},new Object[]{"BEGIN",'m',"POP"},new Object[]{"BEGIN",'b',"PROC"},new Object[]{"BEGIN",'1',"ERR"},new Object[]{"BEGIN",'2',"ERR"},new Object[]{"BEGIN",'3',"ERR"},new Object[]{"BEGIN",'4',"ERR"},new Object[]{"BEGIN",'5',"ERR"},new Object[]{"BEGIN",'6',"ERR"},new Object[]{"BEGIN",'7',"ERR"},new Object[]{"BEGIN",'8',"ERR"},new Object[]{"WALK",'P',"ERR"},new Object[]{"WALK",'C',"ERR"},new Object[]{"WALK",'w',"ERR"},new Object[]{"WALK",'l',"ERR"},new Object[]{"WALK",'v',"ERR"},new Object[]{"WALK",'V',"ERR"},new Object[]{"WALK",'(',"WALKI"},new Object[]{"WALK",'J',"ERR"},new Object[]{"WALK",'j',"ERR"},new Object[]{"WALK",'B',"ERR"},new Object[]{"WALK",'d',"ERR"},new Object[]{"WALK",'g',"ERR"},new Object[]{"WALK",'G',"ERR"},new Object[]{"WALK",'f',"ERR"},new Object[]{"WALK",'A',"ERR"},new Object[]{"WALK",'b',"ERR"},new Object[]{"WALK",'1',"ERR"},new Object[]{"WALK",'2',"ERR"},new Object[]{"WALK",'3',"ERR"},new Object[]{"WALK",'4',"ERR"},new Object[]{"WALK",'5',"ERR"},new Object[]{"WALK",'6',"ERR"},new Object[]{"WALK",'7',"ERR"},new Object[]{"WALK",'8',"ERR"},new Object[]{"WALKI",'P',"ERR"},new Object[]{"WALKI",'#',"WALKIN"},new Object[]{"WALKI",'P',"ERR"},new Object[]{"WALKI",'C',"END"},new Object[]{"WALKI",'w',"ERR"},new Object[]{"WALKI",'l',"ERR"},new Object[]{"WALKI",'v',"WALKIN"},new Object[]{"WALKI",'V',"WALKIN"},new Object[]{"WALKI",'J',"ERR"},new Object[]{"WALKI",'j',"ERR"},new Object[]{"WALKI",'B',"ERR"},new Object[]{"WALKI",'d',"ERR"},new Object[]{"WALKI",'g',"ERR"},new Object[]{"WALKI",'G',"ERR"},new Object[]{"WALKI",'f',"ERR"},new Object[]{"WALKI",'A',"ERR"},new Object[]{"WALKI",'b',"ERR"},new Object[]{"WALKI",'1',"WALKTO"},new Object[]{"WALKI",'2',"WALKTO"},new Object[]{"WALKI",'3',"WALKTO"},new Object[]{"WALKI",'4',"WALKTO"},new Object[]{"WALKI",'5',"WALKTO"},new Object[]{"WALKI",'6',"WALKTO"},new Object[]{"WALKI",'7',"WALKTO"},new Object[]{"WALKI",'8',"WALKTO"},new Object[]{"WALKIN",'p',"ERR"},new Object[]{"WALKIN",'C',"ERR"},new Object[]{"WALKIN",'w',"ERR"},new Object[]{"WALKIN",'l',"ERR"},new Object[]{"WALKIN",'v',"ERR"},new Object[]{"WALKIN",'V',"ERR"},new Object[]{"WALKIN",'J',"ERR"},new Object[]{"WALKIN",'j',"ERR"},new Object[]{"WALKIN",'B',"ERR"},new Object[]{"WALKIN",'d',"ERR"},new Object[]{"WALKIN",'g',"ERR"},new Object[]{"WALKIN",'G',"ERR"},new Object[]{"WALKIN",'f',"ERR"},new Object[]{"WALKIN",'A',"ERR"},new Object[]{"WALKIN",'b',"ERR"},new Object[]{"WALKIN",'1',"ERR"},new Object[]{"WALKIN",'2',"ERR"},new Object[]{"WALKIN",'3',"ERR"},new Object[]{"WALKIN",'4',"ERR"},new Object[]{"WALKIN",'5',"ERR"},new Object[]{"WALKIN",'6',"ERR"},new Object[]{"WALKIN",'7',"ERR"},new Object[]{"WALKIN",'8',"ERR"},new Object[]{"WALKIN",')',"WALKINX"},new Object[]{"WALKTO",'p',"ERR"},new Object[]{"WALKTO",'C',"ERR"},new Object[]{"WALKTO",'w',"ERR"},new Object[]{"WALKTO",'l',"ERR"},new Object[]{"WALKTO",'v',"WALKTO"},new Object[]{"WALKTO",'V',"WALKTO"},new Object[]{"WALKTO",'#',"WALKTO"},new Object[]{"WALKTO",'J',"ERR"},new Object[]{"WALKTO",'j',"ERR"},new Object[]{"WALKTO",'B',"ERR"},new Object[]{"WALKTO",'d',"ERR"},new Object[]{"WALKTO",'g',"ERR"},new Object[]{"WALKTO",'G',"ERR"},new Object[]{"WALKTO",'f',"ERR"},new Object[]{"WALKTO",'A',"ERR"},new Object[]{"WALKTO",'b',"ERR"},new Object[]{"WALKTO",'b',"ERR"},new Object[]{"WALKTO",'1',"WALKTO"},new Object[]{"WALKTO",'2',"WALKTO"},new Object[]{"WALKTO",'3',"WALKTO"},new Object[]{"WALKTO",'4',"WALKTO"},new Object[]{"WALKTO",'5',"WALKTO"},new Object[]{"WALKTO",'6',"WALKTO"},new Object[]{"WALKTO",'7',"WALKTO"},new Object[]{"WALKTO",'8',"WALKTO"},new Object[]{"WALKTO",',',"WALKTO"},new Object[]{"WALKTO",')',"WALKINX"},new Object[]{"WALKINX",'p',"ERR"},new Object[]{"WALKINX",'C',"ERR"},new Object[]{"WALKINX",'w',"ERR"},new Object[]{"WALKINX",'l',"ERR"},new Object[]{"WALKINX",'v',"ERR"},new Object[]{"WALKINX",'V',"ERR"},new Object[]{"WALKINX",'#',"ERR"},new Object[]{"WALKINX",'J',"ERR"},new Object[]{"WALKINX",'j',"ERR"},new Object[]{"WALKINX",'B',"ERR"},new Object[]{"WALKINX",'d',"ERR"},new Object[]{"WALKINX",'g',"ERR"},new Object[]{"WALKINX",'G',"ERR"},new Object[]{"WALKINX",'f',"ERR"},new Object[]{"WALKINX",'A',"ERR"},new Object[]{"WALKINX",'b',"ERR"},new Object[]{"WALKINX",'b',"ERR"},new Object[]{"WALKINX",'1',"ERR"},new Object[]{"WALKINX",'2',"ERR"},new Object[]{"WALKINX",'3',"ERR"},new Object[]{"WALKINX",'4',"ERR"},new Object[]{"WALKINX",'5',"ERR"},new Object[]{"WALKINX",'6',"ERR"},new Object[]{"WALKINX",'7',"ERR"},new Object[]{"WALKINX",'8',"ERR"},new Object[]{"WALKINX",';',"BEGIN"},new Object[]{"VEER",'p',"ERR"},new Object[]{"VEER",'C',"ERR"},new Object[]{"VEER",'w',"ERR"},new Object[]{"VEER",'l',"ERR"},new Object[]{"VEER",'v',"ERR"},new Object[]{"VEER",'V',"ERR"},new Object[]{"VEER",'#',"ERR"},new Object[]{"VEER",'J',"ERR"},new Object[]{"VEER",'j',"ERR"},new Object[]{"VEER",'B',"ERR"},new Object[]{"VEER",'d',"ERR"},new Object[]{"VEER",'g',"ERR"},new Object[]{"VEER",'G',"ERR"},new Object[]{"VEER",'f',"ERR"},new Object[]{"VEER",'A',"ERR"},new Object[]{"VEER",'b',"ERR"},new Object[]{"VEER",'b',"ERR"},new Object[]{"VEER",'1',"VEER"},new Object[]{"VEER",'2',"VEER"},new Object[]{"VEER",'3',"ERR"},new Object[]{"VEER",'4',"ERR"},new Object[]{"VEER",'5',"ERR"},new Object[]{"VEER",'6',"ERR"},new Object[]{"VEER",'7',"ERR"},new Object[]{"VEER",'8',"ERR"},new Object[]{"VEER",';',"BEGIN"},new Object[]{"VEER",'(',"VEER"},new Object[]{"VEER",')',"VEER"},new Object[]{"LOOK",'p',"ERR"},new Object[]{"LOOK",'C',"ERR"},new Object[]{"LOOK",'w',"ERR"},new Object[]{"LOOK",'l',"ERR"},new Object[]{"LOOK",'v',"ERR"},new Object[]{"LOOK",'V',"ERR"},new Object[]{"LOOK",'#',"ERR"},new Object[]{"LOOK",'J',"ERR"},new Object[]{"LOOK",'j',"ERR"},new Object[]{"LOOK",'B',"ERR"},new Object[]{"LOOK",'d',"ERR"},new Object[]{"LOOK",'g',"ERR"},new Object[]{"LOOK",'G',"ERR"},new Object[]{"LOOK",'f',"ERR"},new Object[]{"LOOK",'A',"ERR"},new Object[]{"LOOK",'b',"ERR"},new Object[]{"LOOK",'b',"ERR"},new Object[]{"LOOK",'1',"ERR"},new Object[]{"LOOK",'2',"ERR"},new Object[]{"LOOK",'3',"ERR"},new Object[]{"LOOK",'4',"ERR"},new Object[]{"LOOK",'5',"LOOK"},new Object[]{"LOOK",'6',"LOOK"},new Object[]{"LOOK",'7',"LOOK"},new Object[]{"LOOK",'8',"LOOK"},new Object[]{"LOOK",';',"BEGIN"},new Object[]{"LOOK",'(',"LOOK"},new Object[]{"LOOK",')',"LOOK"},new Object[]{"DROP",'p',"ERR"},new Object[]{"DROP",'C',"ERR"},new Object[]{"DROP",'w',"ERR"},new Object[]{"DROP",'l',"ERR"},new Object[]{"DROP",'v',"DROP"},new Object[]{"DROP",'V',"DROP"},new Object[]{"DROP",'#',"DROP"},new Object[]{"DROP",'J',"ERR"},new Object[]{"DROP",'j',"ERR"},new Object[]{"DROP",'B',"ERR"},new Object[]{"DROP",'d',"ERR"},new Object[]{"DROP",'g',"ERR"},new Object[]{"DROP",'G',"ERR"},new Object[]{"DROP",'f',"ERR"},new Object[]{"DROP",'A',"ERR"},new Object[]{"DROP",'b',"ERR"},new Object[]{"DROP",'b',"ERR"},new Object[]{"DROP",'1',"ERR"},new Object[]{"DROP",'2',"ERR"},new Object[]{"DROP",'3',"ERR"},new Object[]{"DROP",'4',"ERR"},new Object[]{"DROP",'5',"ERR"},new Object[]{"DROP",'6',"ERR"},new Object[]{"DROP",'7',"ERR"},new Object[]{"DROP",'8',"ERR"},new Object[]{"DROP",';',"BEGIN"},new Object[]{"DROP",'(',"DROP"},new Object[]{"DROP",')',"DROP"},new Object[]{"END",'p',"ERR"},new Object[]{"END",'f',"ERR"},new Object[]{"END",'m',"ERR"},new Object[]{"END",'l',"ERR"},new Object[]{"END",'r',"ERR"},new Object[]{"END",'n',"ERR"},new Object[]{"END",'v',"ERR"},new Object[]{"END",'e',"ERR"},new Object[]{"END",'s',"ERR"},new Object[]{"END",'a',"ERR"},new Object[]{"END",'M',"ERR"},new Object[]{"END",'t',"ERR"},new Object[]{"END",'F',"ERR"},new Object[]{"END",'S',"ERR"},new Object[]{"END",'P',"ERR"},new Object[]{"END",'K',"ERR"},new Object[]{"END",'D',"ERR"},new Object[]{"END",'d',"ERR"},new Object[]{"END",'o',"ERR"},new Object[]{"END",'c',"ERR"},new Object[]{"END",'w',"ERR"},new Object[]{"END",'b',"ERR"}});
+      $line=362;
+      Object M=$fix($invokeMethod(ParserRobot202220.class,"GNondeterministicAutomaton",true,null,new Object[]{Q,\u03A3,q_0,F,\u0394}));
+      $line=364;
+      $result=M;
+      if (true) break $try;
+      $line=365;
+      $rethrow(new RuntimeException("The function \"createAutomaton()\" did not return a value."));
+    }
+    catch (Throwable $throwable) {
+      $rethrow($throwable,ParserRobot202220.class,"createAutomaton",$line);
+    }
+    return $cast(IAutomaton.class,$result);
+  }
   public static IPushdownAutomaton createParser(Object A) {
     int $line=0;
     Object $result=null;
     $try:try {
-      $line=8;
+      $line=372;
       Object Q=$fix($opIntvlY(0,7));
-      $line=9;
+      $line=373;
       Object \u03A3=$fix($opUnionY($invokeMethod(ParserRobot202220.class,"toSet",true,null,new Object[]{A}),GCollections.asSet(' ','\n')));
-      $line=11;
+      $line=375;
       Object \u0393=$fix(GCollections.asSet('1'));
-      $line=12;
+      $line=376;
       Object q_0=$fix(0);
-      $line=13;
+      $line=377;
       Object F=$fix(GCollections.asSet(0));
-      $line=14;
+      $line=378;
       Object M=$fix($invokeMethod(ParserRobot202220.class,"GPushdownAutomaton",true,null,new Object[]{Q,\u03A3,\u0393,q_0,F}));
-      $line=15;
+      $line=379;
       Object SkipChars=$fix(GCollections.asSet(' ','\n'));
-      $line=17;
+      $line=381;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{0,1,'w'}),new Object[]{});
-      $line=18;
+      $line=382;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{1,2,'('}),new Object[]{});
-      $line=19;
+      $line=383;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{2,7,'#'}),new Object[]{});
-      $line=20;
+      $line=384;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{2,7,'V'}),new Object[]{});
-      $line=21;
+      $line=385;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{2,7,'v'}),new Object[]{});
-      $line=23;
+      $line=387;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{2,3,'r'}),new Object[]{});
-      $line=24;
+      $line=388;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{3,6,','}),new Object[]{});
-      $line=26;
+      $line=390;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{0,4,'k'}),new Object[]{});
-      $line=28;
+      $line=392;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{4,5,'('}),new Object[]{});
-      $line=29;
+      $line=393;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{5,7,'N'}),new Object[]{});
-      $line=32;
+      $line=396;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{6,7,'#'}),new Object[]{});
-      $line=33;
+      $line=397;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{6,7,'V'}),new Object[]{});
-      $line=35;
+      $line=399;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{6,7,'v'}),new Object[]{});
-      $line=36;
+      $line=400;
       $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{7,0,')'}),new Object[]{});
-      $line=41;
+      $line=405;
       for (Object $v3:GCollections.unmodifiableCollection(Q)) {
         Object q=$v3;
-        $line=42;
+        $line=406;
         for (Object $v4:GCollections.unmodifiableCollection(SkipChars)) {
           Object s=$v4;
-          $line=43;
+          $line=407;
           $invokeMethod("ignore",$invokeMethod("delta",M,new Object[]{q,q,$opAdditY("",s)}),new Object[]{});
         }
       }
-      $line=48;
+      $line=412;
       $result=M;
       if (true) break $try;
-      $line=49;
+      $line=413;
       $rethrow(new RuntimeException("The function \"createParser(A:Object)\" did not return a value."));
     }
     catch (Throwable $throwable) {
