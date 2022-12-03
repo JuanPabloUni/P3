@@ -1,5 +1,7 @@
 using gold.**
 
+//Variable Declaration
+
 var currentString: String
 var images: GArrayList()
 
@@ -27,6 +29,7 @@ var diffIdents : Boolean
 var Ids: ISet
 var translation : GHashTableMap()
 
+//Type declaration
 
 chars(string) :=  {string.charAt(i)| 0 <= i <string.length() }
 
@@ -41,12 +44,16 @@ allPrefixes(strings):= (∪ s | s ∈ strings: prefixes(s) )
 
 translationGet(q) :=  ((|q|=1 and q ∈Symbols1 and q != '\n')?q:translation.get(q))
 
+//Function to run the Lexer to look for inputs
+
 function runLexer(M, input) begin 
     currentString :=  λ
     images := GArrayList()
     result:=M.acceptsString(input) 
     return ⟨result,images⟩
  end
+ 
+ //Function to determine if there are any errors when lexing the language
  
  function problems(q: String) begin
     
@@ -60,7 +67,8 @@ function runLexer(M, input) begin
 	end
    	
  end
- 
+
+//Translates states of inputs
  
  	function translationPreOps(state) begin
  	 var x, y
@@ -86,6 +94,8 @@ function runLexer(M, input) begin
 
  end
  
+//Creates the Lexer with the specified characteristics 
+
 function createLexer():ITransducer begin
 	
 	initialize()
@@ -111,6 +121,8 @@ function createLexer():ITransducer begin
 	F:= {"INIT"}
 	return 	GDeterministicTransducer(Q,Σ,Out,q₀,F,δ,g,h)
 end
+
+//State transition function
 
 function δ(state,σ) begin
   
