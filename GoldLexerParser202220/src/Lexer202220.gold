@@ -243,10 +243,8 @@ procedure initialize() begin
 	
 	// translation.put("\n",'@')  only use this if \n is part of the language and is not skipped @ must not be used for any other translation 
 	 
-	translation.put("north",'N')
-	translation.put("right",'r')
 	translation.put("walk",'w') 
-	translation.put("look",'k') 
+	translation.put("look",'l') 
 	translation.put("IdL",'v')  
 	translation.put("IdU",'V')
 	translation.put("jump",'j')
@@ -256,10 +254,22 @@ procedure initialize() begin
 	translation.put("grab",'g')
 	translation.put("get",'G')
 	translation.put("free",'f')
-	translation.put("pop",'P')
-	translation.put("PROG",'p')
+	translation.put("pop",'m')
+	translation.put("PROG",'P')
 	translation.put("CORP",'C')
 	translation.put("var",'A')
+	translation.put("PROC",'b')
+	translation.put("right",'1')
+	translation.put("left",'2')
+	translation.put("front",'3')
+	translation.put("back",'4')
+	translation.put("north",'5')
+	translation.put("south",'6')
+	translation.put("east",'7')
+	translation.put("west",'8')
+	translation.put("not", 'n')
+	translation.put("canWalk", 'c')
+	
 	//if  there is no difference between names that start with caps and those that don't,
 	    							//assign the same translation
 	 
